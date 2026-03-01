@@ -1,11 +1,11 @@
-🚗 ESP32-Powered Robotic Car with Robotic Arm
+# 🚗 ESP32-Powered Robotic Car with Robotic Arm
 Remote Assistance & Automation in Hazardous Environments
 
 An ESP32-based wireless robotic system designed for remote operation in hazardous or inaccessible environments. The system integrates a two-wheeled robotic car with a multi-joint robotic arm, both controlled through a web interface hosted directly on ESP32 microcontrollers.
 
 No external apps. No router required. Just open a browser and control.
 
-📌 Overview
+# 📌 Overview
 
 This project provides a portable and flexible robotic solution for applications such as:
 
@@ -25,14 +25,14 @@ ESP32 #2 → Controls the robotic arm
 
 ⚡ The entire system can also be implemented using a single ESP32 depending on GPIO availability and memory usage.
 
-🧠 System Architecture
+# 🧠 System Architecture
 
 User Device (Phone/Laptop Browser)
-⬇
+           ⬇
 ESP32 Hosted Web Server
-⬇
+           ⬇
 Motor Drivers & Servo Controllers
-⬇
+           ⬇
 Robotic Car + Robotic Arm
 
 The ESP32 hosts a local web server either:
@@ -43,7 +43,7 @@ Connected to an existing Wi-Fi network
 
 Users control movement through a browser-based interface built using HTML, CSS, and JavaScript.
 
-🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 ESP32 Microcontrollers (2 Units)
 
@@ -61,7 +61,7 @@ Wi-Fi Communication
 
 Battery Pack Power System
 
-🔌 Hardware Setup
+# 🔌 Hardware Setup
 1️⃣ Robotic Car
 
 Two DC motors connected to L298N Motor Driver
@@ -82,12 +82,12 @@ Separate motor power source recommended
 
 Common ground between modules
 
-⚠️ Important:
+# ⚠️ Important:
 Never supply more than 3.3V–5V to the ESP32.
 Over-voltage can permanently damage the microcontroller.
 Use proper voltage regulators and level shifters where necessary.
 
-💻 Software Setup
+# 💻 Software Setup
 Step 1: Upload Code
 
 Open Arduino IDE
@@ -106,7 +106,7 @@ Open browser and enter ESP32 IP address
 
 Control panel loads automatically
 
-🎮 Features
+# 🎮 Features
 
 ✅ Full Wireless Control via Browser
 
@@ -122,7 +122,7 @@ Control panel loads automatically
 
 ✅ Minimal Latency Communication
 
-📂 Output
+# 📂 Output
 
 Real-time movement control of robotic car
 
