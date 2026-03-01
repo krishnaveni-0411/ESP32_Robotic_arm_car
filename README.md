@@ -1,62 +1,135 @@
-# Robotic_arm_car
-ESP32-Powered Robotic Car and Arm for Remote Assistance and Automation in Hazardous Environments
-We at KL University have developed an automated system that combines a two-wheeled robotic car with a robotic arm, 
-both operated wirelessly through a web server hosted on ESP32 microcontrollers. 
-This system is designed to assist in hazardous or remote environments where direct human intervention is risky or impractical.
-By using ESP32 modules, we can host a control interface on a local web server, 
-enabling users to control both the robotic car and the arm from any browser-enabled device — without the need for any external router or app.
+🚗 ESP32-Powered Robotic Car with Robotic Arm
+Remote Assistance & Automation in Hazardous Environments
 
-💡 Introduction
-This project focuses on building a flexible and portable solution for remote robotic operations, 
-ideal for scenarios such as search and rescue, surveillance, or handling hazardous materials.
-The setup uses two separate ESP32 microcontrollers:
-One dedicated to controlling the robotic car.
-Another dedicated to controlling the robotic arm.
-However, it's also possible to implement the entire system using a single ESP32, 
-depending on memory and GPIO pin availability.
+An ESP32-based wireless robotic system designed for remote operation in hazardous or inaccessible environments. The system integrates a two-wheeled robotic car with a multi-joint robotic arm, both controlled through a web interface hosted directly on ESP32 microcontrollers.
 
-🧰 Technologies Used
-This project is built using:
-ESP32 Microcontroller (2 units)
+No external apps. No router required. Just open a browser and control.
+
+📌 Overview
+
+This project provides a portable and flexible robotic solution for applications such as:
+
+🔍 Search and Rescue Operations
+
+🛰️ Surveillance
+
+☣️ Hazardous Material Handling
+
+🏭 Remote Industrial Inspection
+
+The system uses two ESP32 microcontrollers:
+
+ESP32 #1 → Controls the robotic car
+
+ESP32 #2 → Controls the robotic arm
+
+⚡ The entire system can also be implemented using a single ESP32 depending on GPIO availability and memory usage.
+
+🧠 System Architecture
+
+User Device (Phone/Laptop Browser)
+⬇
+ESP32 Hosted Web Server
+⬇
+Motor Drivers & Servo Controllers
+⬇
+Robotic Car + Robotic Arm
+
+The ESP32 hosts a local web server either:
+
+As a Wi-Fi Hotspot (Access Point Mode), or
+
+Connected to an existing Wi-Fi network
+
+Users control movement through a browser-based interface built using HTML, CSS, and JavaScript.
+
+🛠️ Technologies Used
+
+ESP32 Microcontrollers (2 Units)
+
 Embedded C (Arduino IDE)
-Web Technologies (HTML, CSS, JavaScript for the interface)
-L298N Motor Driver for DC motors
-Servo Motors for robotic arm movement
-Wi-Fi for hosting the control web server
-Battery Pack (for mobility and powering motors)
 
-⚙️ Setup Instructions
-Hardware Connections:
-Assemble the robotic car with two DC motors connected to the L298N motor driver.
-Connect servo motors for each joint in the robotic arm.
-Connect the car setup to ESP32 #1, and the arm to ESP32 #2.
-Power both ESP32s using regulated 5V power supply.
+HTML, CSS, JavaScript (Web Interface)
 
-Software Upload:
-Open Arduino IDE and upload the respective code files to each ESP32.
-Ensure correct board and port are selected.
-Use the provided HTML interface embedded in the ESP32 code to access controls.
+L298N Motor Driver
 
-Running the Web Server:
-ESP32 creates a Wi-Fi hotspot or connects to an existing Wi-Fi network.
-Access the control panel by entering the ESP32's IP address in a browser.
-Use on-screen buttons to control car movement and arm articulation.
+DC Motors
 
-IMPORTANT NOTE:
-⚠️ Never supply more than the required voltage (typically 3.3V-5V) to the ESP32. 
-Over-voltage can irreversibly damage the microcontroller.
-Always use voltage regulators or level shifters if needed.
+Servo Motors
 
-📁 Output
-Real-time, responsive control of both car and arm from a browser.
-Clean, intuitive web interface hosted directly by ESP32.
-Portable system — no dependency on external network or apps.
-Capable of navigating and interacting with objects in tight or risky spaces.
+Wi-Fi Communication
 
-🌟 Features
-Full wireless control using local web server interface
-Independent modules for robotic car and arm (but can be combined into one)
-Compact and modular design
-Real-time response and minimal latency
-Smooth PWM control for motors and servos
-Portable, app-free, and user-friendly
+Battery Pack Power System
+
+🔌 Hardware Setup
+1️⃣ Robotic Car
+
+Two DC motors connected to L298N Motor Driver
+
+Motor driver connected to ESP32 #1
+
+2️⃣ Robotic Arm
+
+Servo motors for each joint
+
+Connected to ESP32 #2
+
+3️⃣ Power Supply
+
+Regulated 5V power supply for ESP32
+
+Separate motor power source recommended
+
+Common ground between modules
+
+⚠️ Important:
+Never supply more than 3.3V–5V to the ESP32.
+Over-voltage can permanently damage the microcontroller.
+Use proper voltage regulators and level shifters where necessary.
+
+💻 Software Setup
+Step 1: Upload Code
+
+Open Arduino IDE
+
+Select correct ESP32 board
+
+Choose correct COM port
+
+Upload respective code to each ESP32
+
+Step 2: Start Web Server
+
+ESP32 creates Wi-Fi hotspot OR connects to Wi-Fi
+
+Open browser and enter ESP32 IP address
+
+Control panel loads automatically
+
+🎮 Features
+
+✅ Full Wireless Control via Browser
+
+✅ No Mobile App Required
+
+✅ Real-Time Motor & Servo Control
+
+✅ Smooth PWM-Based Movement
+
+✅ Modular Design
+
+✅ Portable & Independent Operation
+
+✅ Minimal Latency Communication
+
+📂 Output
+
+Real-time movement control of robotic car
+
+Precise arm articulation
+
+Clean and responsive web interface
+
+Operates without external routers or applications
+
+Suitable for confined or hazardous environments
